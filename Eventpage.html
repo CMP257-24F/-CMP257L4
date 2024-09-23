@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Event Submission Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="AUSLogo.png" alt="" width="100" height="100">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" 
+              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="navbar-link navitems" href="http://127.0.0.1:5500/Lab%201-3/Homepage.html">Homepage</a>
+                  </li>
+                  &nbsp
+                  <li class="nav-item">
+                    <a class="navbar-link navitems" href="http://127.0.0.1:5500/Lab%201-3/Eventpage.html">Eventpage</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <body>
+        <h1>Event Submission Page</h1>
+        <div class="container">
+        <form action="/eventsubmission">
+            <div id="margin">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <label for="ename">Event Name:</label><br>
+                        <input class="form-control form-control-lg"type="text" id="ename" name="ename" required><br><br>
+                        <label for="edate">Event Date:</label><br>
+                        <input class="form-control" type="date" id="edate" name="edate" required><br><br>
+                        <label for="etime">Event Time:</label><br>
+                        <input class="form-control" type="time" id="etime" name="etime"><br><br>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <label for="elocation">Event Location:</label><br>
+                        <input class="form-control" type="text" id="elocation" name="elocation"><br><br>
+                        <label for="edescription">Event Description</label><br>
+                        <textarea class="form-control" rows="3" id="edescription" name="edescription"></textarea><br><br>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <label for="oname">Organizer Name:</label><br>
+                        <input class="form-control" type="text" id="oname" name="oname"><br><br>
+                        <label for="oemail">Organizer Email:</label><br>
+                        <input class="form-control" type="email" id="oemail" name="oemail" placeholder="name@example.com"><br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <p>Is this event open to all students?" </p>
+                        <input type="radio" id="Yes" name="question">
+                        <label for="Yes">Yes</label><br>
+                        <input type="radio" id="No" name="question">
+                        <label for="No">No</label><br>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <p>What type of event is this?</p>
+                        <input type="checkbox" id="Workshop" name="Workshop">
+                        <label for="Workshop">Workshop</label>
+                        <input type="checkbox" id="Social" name="Social">
+                        <label for="Social">Social</label>
+                        <input type="checkbox" id="Sports" name="Sports">
+                        <label for="Sports">Sports</label>
+                        <input type="checkbox" id="Academic" name="Academic">
+                        <label for="Academic">Academic</label>
+                        <input type="checkbox" id="Other" name="Other">
+                        <label for="Other">Other</label><br><br>
+                        <label for="department">Select the department hosting the event:</label>
+                        <select class="form-control form-control-sm" id="department" name="department">
+                            <option>CEN</option>
+                            <option>SBA</option>
+                            <option>CAS</option>
+                            <option>CAAD</option>
+                            <option>OSA</option>
+                            <option>Other</option>
+                        </select><br>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary">
+                <input type="reset" class="btn btn-danger">
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
